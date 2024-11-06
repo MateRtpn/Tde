@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMR Calculator </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">โครงงาน Bmr</a>
+            <button class="menu-toggle">☰</button>
+            <nav>
+                <ul class="menu-items">
+                    <li><a href="#">--</a></li>
+                    <li><a href="#">--</a></li>
+                    <li><a href="#">--</a></li>
+                    <li><a href="#">--</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+<main>
+    <section class="calculator-section">
+        <h1>โปรแกรมคำนวนแคลอรี่ที่เผาผลาญในแต่ละวัน</h1>
+        <p>คำแนะนำเบื้องต้นเกี่ยวกับการคำนวณแคลอรี่เพื่อช่วยในการลดหรือเพิ่มน้ำหนัก</p>
+
+        <h2>ขั้นตอนที่ 1 : คำนวณ BMR</h2>
+        <div class="calculator-box">
+            <label>เพศ</label>
+            <div class="calculator-sex">
+            <button>ผู้ชาย</button>
+            <button>ผู้หญิง</button>
+            </div>
+            <input type="number" placeholder="น้ำหนัก (kg)">
+            <input type="number" placeholder="ส่วนสูง (cm)">
+            <input type="number" placeholder="อายุ (ปี)">
+            <button>คำนวณ</button>
+            <div class="result">ค่า BMR: 0 แคลอรี่</div>
+        </div>
+
+        <h2>ขั้นตอนที่ 2 : คำนวณ TDEE</h2>
+        <div class="calculator-box">
+            <label>เลือกระดับการทำกิจกรรม</label>
+            <select>
+                <option>ไม่ทำกิจกรรม</option>
+                <option>กิจกรรมเบาๆ 1-3 วัน</option>
+                <option>กิจกรรมปานกลาง 3-5 วัน</option>
+                <option>กิจกรรมหนัก 5-7 วัน</option>
+            </select>
+            <button>คำนวณ</button>
+            <div class="result">ค่า TDEE: 0 แคลอรี่</div>
+        </div>
+
+        <h2>ขั้นตอนที่ 3 : ต้องกินแค่ไหน?</h2>
+        <div class="calculator-box">
+            <input type="number" placeholder="น้ำหนักที่ต้องการ (kg)">
+            <input type="number" placeholder="ระยะเวลา (เดือน)">
+            <button>คำนวณ</button>
+            <div class="result">พลังงานแนะนำต่อวัน: 0 แคลอรี่</div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>โครงงานนี้จัดทำขึ้นเพื่อให้ความรู้และส่งเสริมสุขภาพเกี่ยวกับการคำนวณแคลอรี่และการดูแลสุขภาพ</p>
+</footer>
+
+
+
+<script src="funtion.js"></script>
+</body>
+</html>

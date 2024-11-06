@@ -15,11 +15,12 @@ header {
     background-color: #f8f8fb;
     padding: 15px 0;
     border-bottom: 2px solid #e0e0e0;
+    color: #007bff;
 }
 
 .menu-toggle {
     display: flex;
-    background-color: #7f4cdb;
+    background-color: #007bff;
     color: #fff;
     font-size: 1.5em;
     padding: 10px;
@@ -40,7 +41,7 @@ header {
 .header-container .logo {
     font-size: 2em;
     font-weight: bold;
-    color: #7f4cdb;
+    color: #007bff;
     text-decoration: none;
 }
 
@@ -133,7 +134,7 @@ main {
 }
 
 .calculator-box button {
-    background-color: #7f4cdb;
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -147,16 +148,181 @@ main {
 }
 
 .calculator-box button:hover {
-    background-color: #6b3abc;
+    background-color: #3597ff;
     transform: scale(1.05);
 }
 
 .result {
     margin-top: 15px;
     font-weight: bold;
-    color: #7f4cdb;
+    color: #007bff;
     font-size: 1.2em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FAQ Section Styling */
+.faq-section {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.faq-section h1 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h2 {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 12px 15px;
+    border-radius: 5px;
+}
+
+
+.faq-item p {
+    padding: 15px;
+    background-color: #f9f9f9;
+    margin-top: 0;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+.teacher-member {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.teacher-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.teacher-member h2 {
+    font-size: 18px;
+    color: #007bff;
+    margin: 10px 0 5px;
+}
+
+.teacher-member p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+.team-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+.team-section {
+    max-width: 1100px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h2 {
+    font-size: 18px;
+    color: #007bff;
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 footer {
     background-color: #f8f8fb;
@@ -188,7 +354,7 @@ footer p {
         border-radius: 5px;
         cursor: pointer;
         position: relative;
-        background-color: #7f4cdb;
+        background-color: #007bff;
         color: #fff;
         margin-left: auto;
     }
@@ -196,6 +362,7 @@ footer p {
     .menu-toggle.active + nav .menu-items {
         display: block; 
         animation: slideDown 0.3s ease-in-out;
+        margin-top: 10px;
     }
 
     .menu-items {
@@ -222,7 +389,7 @@ footer p {
     @keyframes slideDown {
         from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateX(50px);
         }
         to {
             opacity: 1;
@@ -240,7 +407,7 @@ footer p {
 
     .header-container .logo {
         font-size: 1.4em;
-        color: #7f4cdb;
+        color: #007bff;
         text-decoration: none;
         margin: 0;
     }
@@ -250,7 +417,7 @@ footer p {
     }
 
     .menu-toggle.active {
-        background-color: #7f4cdb;
+        background-color: #007bff;
     }
 
     header nav ul {
@@ -342,7 +509,7 @@ footer p {
         font-size: 0.9em;
         border-radius: 20px;
         border: none;
-        background-color: #7f4cdb;
+        background-color: #007bff;
         color: #fff;
         cursor: pointer;
         transition: background-color 0.3s;
@@ -355,7 +522,7 @@ footer p {
         margin-top: 10px;
         font-size: 1em;
         border-radius: 25px;
-        background-color: #7f4cdb;
+        background-color: #007bff;
         color: #fff;
         border: none;
         cursor: pointer;
@@ -363,13 +530,13 @@ footer p {
     }
 
     .calculator-box button:hover {
-        background-color: #6b3abc;
+        background-color: #007bff;
     }
 
     .result {
         margin-top: 15px;
         font-weight: bold;
-        color: #7f4cdb;
+        color: #007bff;
         font-size: 1.1em;
     }
     footer {

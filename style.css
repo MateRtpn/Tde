@@ -74,28 +74,29 @@ main {
 }
 
 .calculator-section {
-    
     background-color: #fff;
     width: 50%;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .calculator-section h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .calculator-section p {
-    color: #666;
+    color: #555;
     margin-bottom: 20px;
     font-size: 1em;
+    text-align: center;
 }
 
 .calculator-section h2 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-top: 30px;
     color: #333;
     padding-bottom: 8px;
@@ -103,30 +104,52 @@ main {
 }
 
 .calculator-box {
-    background-color: #fafafa;
-    padding: 20px;
+    background-color: #f9f9f9;
+    padding: 25px;
     border-radius: 12px;
-    margin-top: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
 .calculator-box label {
     display: block;
-    font-weight: 500;
-    color: #555;
+    font-weight: 600;
+    color: #444;
     margin-bottom: 10px;
 }
 
+/* Styles for Gender Buttons */
 .calculator-sex {
-    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.calculator-sex button {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: #e9ecef;
+    color: #555;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calculator-sex button.selected {
+    background-color: #007bff;
+    color: #fff;
+    border: 3px solid #0056b3;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
 }
 
 .calculator-box input[type="number"],
-
 .calculator-box select {
     width: 100%;
-    padding: 12px;
+    padding: 14px;
     margin-bottom: 15px;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -138,32 +161,27 @@ main {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 25px;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    margin-top: 10px;
     width: 100%;
-    max-width: 200px;
+    max-width: 220px;
+    margin-top: 15px;
 }
 
 .calculator-box button:hover {
-    background-color: #3597ff;
-    transform: scale(1.05);
+    background-color: #0056b3;
+    transform: translateY(-3px);
 }
 
 .result {
-    margin-top: 15px;
+    margin-top: 20px;
     font-weight: bold;
     color: #007bff;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }
-
-
-
-
-
 
 
 
@@ -327,6 +345,7 @@ main {
 
 .team-member a {
     text-decoration: none;
+    font-size: 15px;
     color: #555;
 }
 
@@ -542,21 +561,22 @@ footer p {
     }
 
     .calculator-box button {
-        width: 100%;
-        max-width: 150px;
-        padding: 10px;
-        margin-top: 10px;
-        font-size: 1em;
-        border-radius: 25px;
         background-color: #007bff;
         color: #fff;
         border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 1em;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: background-color 0.3s, transform 0.2s;
+        width: 100%;
+        max-width: 220px;
+        margin-top: 15px;
     }
 
     .calculator-box button:hover {
-        background-color: #007bff;
+        background-color: #0056b3;
+        transform: translateY(-3px);
     }
 
     .result {

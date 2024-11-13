@@ -105,11 +105,3 @@ dailyIntakeButton.addEventListener("click", () => {
 
     dailyIntakeResult.textContent = `พลังงานแนะนำต่อวัน: ${Math.round(recommendedIntake)} แคลอรี่`;
 });
-
-
-
-
-
-
-
-

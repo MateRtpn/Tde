@@ -73,6 +73,43 @@ main {
     margin: 20px auto;
 }
 
+
+
+
+
+/* Popup Styles */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 5px solid white;
+    border-radius: 10px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    font-size: 80px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
 .calculator-section {
     background-color: #fff;
     width: 50%;
@@ -552,12 +589,11 @@ footer p {
         margin: 5px;
         padding: 10px;
         font-size: 0.9em;
-        border-radius: 20px;
+        border-radius: 30px;
         border: none;
         background-color: #007bff;
         color: #fff;
         cursor: pointer;
-        transition: background-color 0.3s;
     }
 
     .calculator-box button {
@@ -565,19 +601,15 @@ footer p {
         color: #fff;
         border: none;
         padding: 12px 20px;
-        border-radius: 25px;
+        border-radius: 300px;
         font-size: 1em;
         cursor: pointer;
-        transition: background-color 0.3s, transform 0.2s;
         width: 100%;
         max-width: 220px;
         margin-top: 15px;
     }
 
-    .calculator-box button:hover {
-        background-color: #0056b3;
-        transform: translateY(-3px);
-    }
+
 
     .result {
         margin-top: 15px;

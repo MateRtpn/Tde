@@ -4,9 +4,6 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
 });
 
 
-
-
-// Variables for elements
 const sexButtons = document.querySelectorAll(".calculator-sex button");
 const weightInput = document.querySelector("input[placeholder='น้ำหนัก (kg)']");
 const heightInput = document.querySelector("input[placeholder='ส่วนสูง (cm)']");
@@ -23,10 +20,35 @@ const timeInput = document.querySelector("input[placeholder='ระยะเว�
 const dailyIntakeButton = document.querySelectorAll("button")[5];
 const dailyIntakeResult = document.querySelectorAll(".result")[2];
 
-// Global variables to store user input and selection
-let selectedSex = 'ผู้ชาย';
 
-// Event listeners for sex selection
+
+
+
+
+let selectedSex = null;
+
+
+
+function showAlert(message) {
+    Swal.fire({
+        icon: "warning",
+        title: "ข้อผิดพลาด",
+        text: message,
+        confirmButtonText: "ตกลง",
+        confirmButtonColor: "#007bff",
+    });
+}
+
+
+function ensureSexSelected() {
+    if (!selectedSex) {
+        showAlert("กรุณาเลือกเพศก่อนคำนวณ");
+        return false;
+    }
+    return true;
+}
+
+
 sexButtons.forEach((button) => {
     button.addEventListener("click", () => {
         selectedSex = button.textContent;
@@ -35,17 +57,23 @@ sexButtons.forEach((button) => {
     });
 });
 
-// BMR Calculation
+
+
+
+
+
 bmrButton.addEventListener("click", () => {
+    if (!ensureSexSelected()) return;
+
     const weight = parseFloat(weightInput.value);
     const height = parseFloat(heightInput.value);
     const age = parseFloat(ageInput.value);
-    
+
     if (!weight || !height || !age) {
-        bmrResult.textContent = "กรุณากรอกข้อมูลให้ครบ";
+        showAlert("กรุณากรอกข้อมูลให้ครบ");
         return;
     }
-    
+
     let bmr;
     if (selectedSex === 'ผู้ชาย') {
         bmr = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
@@ -56,13 +84,22 @@ bmrButton.addEventListener("click", () => {
     bmrResult.textContent = `ค่า BMR: ${Math.round(bmr)} แคลอรี่`;
 });
 
-// TDEE Calculation
+
+
+
+
+
+
+
+
 tdeeButton.addEventListener("click", () => {
+    if (!ensureSexSelected()) return;
+
     const activityLevel = activitySelect.value;
     const bmr = parseFloat(bmrResult.textContent.replace("ค่า BMR: ", "").replace(" แคลอรี่", ""));
-    
+
     if (isNaN(bmr)) {
-        tdeeResult.textContent = "กรุณาคำนวณ BMR ก่อน";
+        showAlert("กรุณาคำนวณ BMR ก่อน");
         return;
     }
 
@@ -88,14 +125,23 @@ tdeeButton.addEventListener("click", () => {
     tdeeResult.textContent = `ค่า TDEE: ${Math.round(tdee)} แคลอรี่`;
 });
 
-// Daily Intake Calculation for Target Weight
+
+
+
+
+
+
+
+
 dailyIntakeButton.addEventListener("click", () => {
+    if (!ensureSexSelected()) return;
+
     const targetWeight = parseFloat(targetWeightInput.value);
     const months = parseFloat(timeInput.value);
     const tdee = parseFloat(tdeeResult.textContent.replace("ค่า TDEE: ", "").replace(" แคลอรี่", ""));
-    
+
     if (isNaN(tdee) || isNaN(targetWeight) || isNaN(months) || months <= 0) {
-        dailyIntakeResult.textContent = "กรุณากรอกข้อมูลให้ครบและคำนวณ TDEE ก่อน";
+        showAlert("กรุณากรอกข้อมูลให้ครบและคำนวณ TDEE ก่อน");
         return;
     }
 
@@ -105,3 +151,6 @@ dailyIntakeButton.addEventListener("click", () => {
 
     dailyIntakeResult.textContent = `พลังงานแนะนำต่อวัน: ${Math.round(recommendedIntake)} แคลอรี่`;
 });
+
+
+
